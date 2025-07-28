@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_client_platform_links",
+  "info": {
+    "displayName": "Client Platform Link",
+    "description": "Joins a client to a platform at a permission level"
+  },
+  "options": {},
+  "attributes": {
+    "platform": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::platform.platform"
+    },
+    "permission_level": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::permission-level.permission-level"
+    }
+  }
+}

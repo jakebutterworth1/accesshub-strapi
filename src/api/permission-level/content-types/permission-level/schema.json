@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "permission_levels",
+  "info": {
+    "singularName": "permission-level",
+    "pluralName": "permission-levels",
+    "displayName": "Permission Level"
+  },
+  "options": { "draftAndPublish": false },
+  "visible": true,
+  "pluginOptions": {
+    "content-manager": { "visible": true },
+    "content-type-builder": { "visible": true }
+  },
+  "attributes": {
+    "name": { "type": "string", "required": true, "unique": true },
+    "description": { "type": "text" }
+  }
+}

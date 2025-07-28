@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clients",
+  "info": {
+    "singularName": "client",
+    "pluralName": "clients",
+    "displayName": "Client",
+    "description": ""
+  },
+  "options": { "draftAndPublish": false },
+  "visible": true,
+  "pluginOptions": {
+    "content-manager": { "visible": true },
+    "content-type-builder": { "visible": true }
+  },
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "email": { "type": "email", "required": true, "unique": true },
+    "business_name": { "type": "string", "required": true },
+    "status_of_request": {
+      "type": "enumeration",
+      "enum": ["pending", "connected", "denied"],
+      "default": "pending"
+    },
+    "requested_by_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "clients"
+    },
+    "platform_access": {
+      "type": "component",
+      "repeatable": true,
+      "component": "client.client-platform-link"
+    }
+  }
+}
