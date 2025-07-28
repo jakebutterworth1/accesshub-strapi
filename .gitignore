@@ -8,3 +8,4 @@ coverage/
 .env.*
 uploads/*
 !uploads/.gitkeep
+debug.log
